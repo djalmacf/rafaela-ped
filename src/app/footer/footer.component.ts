@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
+  reloadPage() {
+    window.location.reload();
+  }
 }

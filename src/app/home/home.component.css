@@ -26,6 +26,7 @@
   left: auto !important;
   max-width: 100% !important;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .rwb-tooltip {

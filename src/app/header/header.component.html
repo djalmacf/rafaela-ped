@@ -9,8 +9,8 @@
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-      <button class="close-menu">
-        <a class="x-menu" href="#navbarNavDropdown">&times;</a>
+      <button class="close-menu" (click)="reloadPage()">
+        <a class="x-menu" href="#">&times;</a>
       </button>
 
       <div id="navbar-social">
@@ -21,12 +21,12 @@
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#navbarNavDropdown">Início</a>
+          <a class="nav-link active" aria-current="page" (click)="reloadPage()" href="#">Início</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#sobre-mim">Sobre</a>
         </li>
-        <a href="#navbarNavDropdown" class="navbar-brand"><span alt="Responsive image"><img src="logo-central-header.png"></span></a>
+        <a href="#" class="navbar-brand"><span alt="Responsive image" (click)="reloadPage()"><img src="logo-central-header.png"></span></a>
         <li class="nav-item">
           <a class="nav-link" href="#contato">Contato</a>
         </li>
@@ -40,12 +40,12 @@
 
       <div id="navbar-botao">
         <a href="https://api.whatsapp.com/send?phone=5518988231031&text=Ol%C3%A1,%20vim%20pelo%20site." target="_blank">
-          <button class="btn">Agende uma consulta</button>
+          <button class="btn" id="botao-topo">Agende uma consulta</button>
         </a>
       </div>
 
       <div id="navbar-social-media">
-        <a href="#" target="_blank"><i class="fab fa-facebook-f" style="color: #ffffff;"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61556983570629" target="_blank"><i class="fab fa-facebook-f" style="color: #ffffff;"></i></a>
         <a href="https://www.instagram.com/dra.rafaelacborges/" style="color: #ffffff;" target="_blank"><i class="fab fa-instagram" style="color: #ffffff;"></i></a>
         <a href="https://maps.app.goo.gl/Wi7M2S9a2GnF8KS49" style="color: #ffffff;" target="_blank"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></a>
       </div>
@@ -53,7 +53,7 @@
     </div>
 
     <div class="navbar-brand-mobile">
-      <a href="#navbarNavDropdown"><span alt="Responsive image"><img src="logo-central-header.png"></span></a>
+      <a href="#" (click)="reloadPage()"><span alt="Responsive image"><img src="logo-central-header.png"></span></a>
       <a class="btn-mobile" href="https://api.whatsapp.com/send?phone=5518988231031&text=Ol%C3%A1,%20vim%20pelo%20site." target="_blank"><button>Agende uma consulta</button></a>
     </div>
 
