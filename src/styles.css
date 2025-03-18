@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --cor-azul: #6fd4fe;
+  --cor-rosa: #ff70a6;
+  --cor-amarelo: #ffd571;
+  --cor-laranja: #fe966f;
+  --cor-verde: #e8ff70;
+}
