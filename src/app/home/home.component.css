@@ -30,8 +30,8 @@
 }
 
 .rwb-tooltip {
-  white-space: nowrap; /* Evita quebra de linha no tooltip */
-  max-width: 200px; /* Ajuste conforme necessário */
+  white-space: nowrap;
+  max-width: 200px;
   overflow: hidden;
 }
 
@@ -48,7 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .container-texto {
@@ -65,24 +65,21 @@
   padding-bottom: 15vh;
   padding-left: 5vh;
   max-width: 70vh;
-  margin-top: 5vh;
+  margin-top: 2vh;
   margin-bottom: 0;
 }
 
 .container-texto h1 {
   font-size: var(--fonte-titulo-header);
   font-weight: bold;
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .container-texto h2 {
   font-size: var(--fonte-subtitulo-header);
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .container-texto h3 {
   font-size: var(--fonte-texto-header);
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .container-texto p {
@@ -99,6 +96,7 @@
   position: relative;
   overflow: hidden;
   align-items: center;
+  overflow-y: hidden;
 }
 
 .container-imagem img {
@@ -106,26 +104,23 @@
   height: auto;
   object-fit: cover;
   align-self: flex-end;
+  overflow-y: hidden;
 }
 
 /* Consultas */
 
 .consultas-container {
   height: fit-content;
-  margin: 20px auto;
+  margin: 5px auto;
   margin-bottom: 0;
   background: #ffffff;
   overflow: hidden;
   padding: 20px;
-  background-image: url('/elementos-fundo.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 30%;
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .consultas-titulo {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -133,12 +128,14 @@
   text-align: center;
 }
 
+.consultas-titulo h2 {
+  font-size: var(--fonte-minuscula);
+  text-transform: uppercase;
+}
+
 .consultas-titulo h1 {
-  font-size: var(--fonte-pequena);
-  font-family: 'Roboto', 'sans-serif';
-  background-color: rgb(235, 235, 235);
-  padding: 10px;
-  border-radius: 2rem;
+  font-size: var(--fonte-media);
+  font-weight: bold;
 }
 
 .consultas-grid {
@@ -154,14 +151,37 @@
   grid-row: span 3;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   border: none;
+  height: 100%;
+  gap: 10px;
+}
+
+.consultas-imagem h2,
+.consultas-imagem h1 {
+  width: 80%;
+  height: fit-content;
+  margin: 0;
+}
+
+.consultas-imagem h2 {
+  font-size: var(--fonte-minuscula);
+  text-transform: uppercase;
+}
+
+.consultas-imagem h1 {
+  font-size: var(--fonte-media);
+  font-weight: bold;
 }
 
 .consultas-imagem img {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  max-width: 100%;
+  flex: 1;
+  width: 80%;
   height: auto;
+  object-fit: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+              rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border-radius: 10px;
 }
 
@@ -177,7 +197,6 @@
   text-align: justify;
   justify-content: top;
   min-height: fit-content;
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .consultas-item:hover {
@@ -185,7 +204,6 @@
 }
 
 .consultas-item .item-titulo {
-  font-family: 'Roboto', 'sans-serif';
   font-size: var(--fonte-pequena);
 }
 
@@ -239,8 +257,48 @@
   font-size: var(--fonte-pequena);
   color: black;
   margin: 0;
+  padding-top: 2rem;
   line-height: 1.5;
-  font-family: 'Lora', 'sans-serif';
+}
+
+#agendar-consulta2 {
+  display: flex;
+  height: fit-content;
+  text-decoration: none !important;
+  padding-bottom: 2rem;
+  justify-content: center;
+}
+
+.btn-consulta2 {
+  text-decoration: none !important;
+  position: right;
+  font-weight: 700;
+  font-size: var(--fonte-menor);
+  background: var(--cor-azul);
+  color: white;
+  cursor: pointer;
+  transition-duration: 1s;
+  transition-property: border-top, border-left, border-bottom, border-right,
+    box-shadow;
+  width: fit-content;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  padding: 10px;
+}
+
+.btn-consulta2:hover {
+  scale: 1.02;
+}
+
+#agendar-consulta2 .btn-consulta2 a {
+  display: block;
+  color: var(--cor-azul);
+  font-size: var(--fonte-menor);
+  text-decoration: none !important;
+}
+
+#agendar-consulta2 a {
+  text-decoration: none;
 }
 
 /* Sobre mim */
@@ -272,6 +330,7 @@
   position: bottom;
   object-fit: cover;
   border-radius: 5rem;
+  overflow-y: hidden;
 }
 
 .sobre-mim-texto {
@@ -289,43 +348,39 @@
 .sobre-mim-texto h3 {
   width: fit-content;
   text-align: justify;
-  font-size: var(--fonte-pequena);
-  font-family: 'Roboto', 'sans-serif';
-  background-color: rgb(235, 235, 235);
-  padding: 10px;
-  border-radius: 2rem;
+  font-size: var(--fonte-minuscula);
+  text-transform: uppercase;
 }
 
 .sobre-mim-texto h1 {
   text-align: justify;
   font-size: var(--fonte-grande);
   font-weight: 600;
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .sobre-mim-texto p {
   text-align: justify;
   font-size: var(--fonte-pequena);
-  font-family: 'Lora', 'sans-serif';
 }
 
 .sobre-mim-texto p strong {
   text-align: justify;
   font-size: var(--fonte-pequena);
-  font-family: 'Lora', 'sans-serif';
 }
 
 .sobre-mim-texto a {
   text-align: justify;
   font-size: var(--fonte-pequena);
-  font-family: 'Lora', 'sans-serif';
   text-decoration: none;
   color: inherit;
 }
 
 #agendar-consulta {
   display: flex;
+  height: fit-content;
   text-decoration: none !important;
+  padding-bottom: 2rem;
+  justify-content: center;
 }
 
 .btn-consulta {
@@ -364,6 +419,7 @@
 
 #contato {
   background: transparent;
+  padding-bottom: 2rem;
 }
 
 .botao-consulta {
@@ -390,6 +446,7 @@
   justify-content: center;
   align-items: center;
   width: fit-content;
+  height: fit-content;
 }
 
 .button-icon {
@@ -451,6 +508,10 @@
   transform: translate3d(0, 0, 1em);
 }
 
+#botao2 {
+  padding-top: 2rem;
+}
+
 /* Consultório */
 
 .consultorio {
@@ -484,11 +545,8 @@
 }
 
 .consultorio-titulo h1 {
-  font-size: var(--fonte-pequena);
-  font-family: 'Roboto', 'sans-serif';
-  background-color: rgb(235, 235, 235);
-  padding: 10px;
-  border-radius: 2rem;
+  font-size: var(--fonte-minuscula);
+  text-transform: uppercase;
 }
 
 .img-localizacao {
@@ -503,11 +561,8 @@
 }
 
 .img-localizacao h1 {
-  font-size: var(--fonte-pequena);
-  font-family: 'Roboto', 'sans-serif';
-  background-color: rgb(235, 235, 235);
-  padding: 10px;
-  border-radius: 2rem;
+  font-size: var(--fonte-minuscula);
+  text-transform: uppercase;
 }
 
 .consultorio iframe {
@@ -521,7 +576,6 @@
 .consultorio h3 {
   padding-top: 2rem;
   font-weight: bold;
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .carousel {
@@ -564,7 +618,6 @@
   font-weight: bold;
   height: fit-content;
   padding-bottom: 1rem;
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .descricao-consultorio p {
@@ -577,49 +630,10 @@
   flex-grow: 1;
   text-align: justify;
   font-size: var(--fonte-pequena);
-  font-family: 'Lora', 'sans-serif';
 }
 
 .descricao-consultorio p:last-child {
   padding-bottom: 0;
-}
-
-#agendar-consulta2 {
-  display: flex;
-  text-decoration: none !important;
-  justify-content: center !important;
-}
-
-.btn-consulta2 {
-  text-decoration: none !important;
-  position: right;
-  font-weight: 700;
-  font-size: var(--fonte-menor);
-  background: var(--cor-rosa);
-  color: white;
-  cursor: pointer;
-  transition-duration: 1s;
-  transition-property: border-top, border-left, border-bottom, border-right,
-    box-shadow;
-  width: fit-content;
-  margin-bottom: 1rem;
-  border-radius: 2rem;
-  padding: 10px;
-}
-
-.btn-consulta2:hover {
-  scale: 1.02;
-}
-
-#agendar-consulta2 .btn-consulta2 a {
-  display: block;
-  color: var(--cor-azul);
-  font-size: var(--fonte-menor);
-  text-decoration: none !important;
-}
-
-#agendar-consulta2 a {
-  text-decoration: none;
 }
 
 /* Atendimentos */
@@ -637,11 +651,8 @@
 }
 
 .titulo-atendimentos h1 {
-  font-size: var(--fonte-pequena);
-  font-family: 'Roboto', 'sans-serif';
-  background-color: rgb(235, 235, 235);
-  padding: 10px;
-  border-radius: 2rem;
+  font-size: var(--fonte-minuscula);
+  text-transform: uppercase;
 }
 
 
@@ -714,13 +725,11 @@
 .heading {
   font-size: var(--fonte-pequena);
   font-weight: bold;
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .card p:not(.heading) {
   font-size: var(--fonte-menor);
   text-align: justify center;
-  font-family: 'Lora', 'sans-serif';
 }
 
 .card p:last-child {
@@ -729,7 +738,6 @@
   margin-top: 0;
   margin-bottom: 5rem;
   padding-bottom: 1rem;
-  font-family: 'Lora', 'sans-serif';
   font-size: var(--fonte-menor);
 }
 
@@ -740,6 +748,107 @@
 
 .card:hover::before {
   transform: scale(1.05);
+}
+
+#agendar-consulta3 {
+  display: flex;
+  height: fit-content;
+  text-decoration: none !important;
+  padding-bottom: 4rem;
+  justify-content: center;
+  background: linear-gradient(-135deg,
+    var(--cor-laranja) 0%,
+    var(--cor-laranja) 5%,
+    transparent 30%,
+    transparent 80%,
+    var(--cor-azul) 95%);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-consulta3 {
+  text-decoration: none !important;
+  position: right;
+  font-weight: 700;
+  font-size: var(--fonte-menor);
+  background: var(--cor-amarelo);
+  color: white;
+  cursor: pointer;
+  transition-duration: 1s;
+  transition-property: border-top, border-left, border-bottom, border-right,
+    box-shadow;
+  width: fit-content;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  padding: 10px;
+}
+
+.btn-consulta3:hover {
+  scale: 1.02;
+}
+
+#agendar-consulta3 .btn-consulta3 a {
+  display: block;
+  color: var(--cor-rosa);
+  font-size: var(--fonte-menor);
+  text-decoration: none !important;
+}
+
+#agendar-consulta3 a {
+  text-decoration: none;
+}
+
+#agendar-consulta4 {
+  display: flex;
+  height: fit-content;
+  text-decoration: none !important;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  justify-content: center;
+  background: linear-gradient(-135deg,
+    var(--cor-laranja) 0%,
+    var(--cor-laranja) 5%,
+    transparent 30%,
+    transparent 80%,
+    var(--cor-azul) 95%);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-consulta4 {
+  text-decoration: none !important;
+  position: right;
+  font-weight: 700;
+  font-size: var(--fonte-menor);
+  background: var(--cor-rosa);
+  color: white;
+  cursor: pointer;
+  transition-duration: 1s;
+  transition-property: border-top, border-left, border-bottom, border-right,
+    box-shadow;
+  width: fit-content;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  padding: 10px;
+}
+
+.btn-consulta4:hover {
+  scale: 1.02;
+}
+
+#agendar-consulta4 .btn-consulta3 a {
+  display: block;
+  color: var(--cor-rosa);
+  font-size: var(--fonte-menor);
+  text-decoration: none !important;
+}
+
+#agendar-consulta4 a {
+  text-decoration: none;
 }
 
 /* Responsividade */
@@ -831,6 +940,10 @@
   .card {
     height: 100%;
   }
+
+  .consultas-titulo {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 561px) and (max-width: 991px) {
@@ -865,19 +978,43 @@
   }
 
   .container-imagem {
-    width: 70%;
+    width: 100%;
     margin-top: 2rem;
+    overflow-y: hidden;
   }
+
+  .container-texto {
+    width: 90%;
+    max-width: none;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .container-texto h1,
+  .container-texto h2,
+  .container-texto h3,
+  .container-texto p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
 }
 
 @media (max-width: 470px) {
+
+  #item1 p {
+    margin-top: 2rem;
+  }
 
   #item2 p {
     margin-top: 2rem;
   }
 
+  #item3 p {
+    margin-top: 2rem;
+  }
+
   .item-titulo i {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .sobre-mim-imagem {
@@ -901,13 +1038,28 @@
   .button-icon {
     scale: 1.05;
   }
+
+  #contato {
+    display: none;
+  }
+
+  #botao2 {
+    display: none;
+  }
+}
+
+@media (min-width: 761px) {
+
+  #agendar-consulta2 {
+    display: none;
+  }
+
+  #agendar-consulta4 {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1700px) {
-  .consultas-imagem {
-    height: 100%;
-  }
-
   .consultas-item {
     width: 100%;
   }
@@ -945,12 +1097,7 @@
 @media (max-width: 991px) {
   .home-container {
     display: flex;
-    padding-right: 10%;
     flex-direction: column;
-  }
-
-  .container-texto {
-    padding-right: 5rem;
   }
 
   #agendar-consulta {

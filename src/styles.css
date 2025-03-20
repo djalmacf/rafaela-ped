@@ -18,6 +18,8 @@ body {
   --fonte-texto-header: clamp(1rem, 3vw, 2rem);
   --fonte-grande: clamp(1.3rem, 3.2vw, 2.2rem);
   --fonte-media: clamp(1.15rem, 3vw, 2rem);
+  --fonte-mobile: clamp(1.1rem, 2.2vw, 1.5rem);
   --fonte-pequena: clamp(1.1rem, 2vw, 1.3rem);
   --fonte-menor: clamp(1rem, 1.8vw, 1.3rem);
+  --fonte-minuscula: clamp(0.8rem, 1.5vw, 1rem);
 }

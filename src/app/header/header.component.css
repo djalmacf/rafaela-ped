@@ -1,7 +1,6 @@
 #navbar {
   background: rgb(233,143,255);
   background: linear-gradient(90deg, var(--cor-rosa) 0%, var(--cor-rosa) 35%, var(--cor-rosa) 50%, rgba(233,251,255,1) 100%);
-  font-family: 'Roboto', 'sans-serif';
 }
 
 .container-fluid {
@@ -19,11 +18,6 @@
   justify-content: center !important;
 }
 
-.navbar-nav ul {
-  font-size: var(--fonte-menor) !important;
-  font-family: 'Roboto', 'sans-serif' !important;
-}
-
 .nav-item {
   justify-content: center !important;
   align-items: center !important;
@@ -34,7 +28,6 @@
 
 .nav-item a {
   border-bottom: 0.5px solid transparent;
-  font-family: 'Roboto', 'sans-serif' !important;
   font-size: var(--fonte-menor) !important;
 }
 
@@ -192,7 +185,6 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-left: 7vh;
   position: relative;
   top: auto;
   gap: 5vh;
@@ -201,39 +193,6 @@
 .navbar-brand-mobile img {
   max-width: auto;
   max-height: 8rem;
-}
-
-.navbar-brand-mobile .btn-mobile {
-  margin: auto;
-  max-width: 15vh;
-  max-height: fit-content;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  background: var(--cor-rosa);
-  color: white;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  transition-duration: 1s;
-  transition-property: border-top, border-left, border-bottom, border-right,
-    box-shadow;
-}
-
-.navbar-brand-mobile .btn-mobile button {
-  text-decoration: none;
-  background-color: transparent !important;
-  border: none;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--cor-azul);
-  text-decoration: none;
-  max-width: 15vh;
-  max-height: 10vh;
-  color: white;
-}
-
-.btn-mobile:hover {
-  scale: 1.1;
 }
 
 /* Responsividade */
