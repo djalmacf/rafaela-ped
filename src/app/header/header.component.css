@@ -1,6 +1,8 @@
 #navbar {
   background: rgb(233,143,255);
   background: linear-gradient(90deg, var(--cor-rosa) 0%, var(--cor-rosa) 35%, var(--cor-rosa) 50%, rgba(233,251,255,1) 100%);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .container-fluid {
