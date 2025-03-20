@@ -15,6 +15,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  padding-bottom: 3rem;
 }
 
 #redes-sociais-footer {
@@ -22,14 +23,8 @@
   font-family: 'Roboto', 'sans-serif' !important;
 }
 
-#navegacao-footer {
-  color: #222229 !important;
-  font-family: 'Roboto', 'sans-serif' !important;
-}
-
 #contato-footer {
-  color: #222229 !important;
-  font-family: 'Roboto', 'sans-serif' !important;
+  padding-bottom: 1rem;
 }
 
 #mapa h6 {

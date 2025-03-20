@@ -70,18 +70,18 @@
 }
 
 .container-texto h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: var(--fonte-titulo-header);
   font-weight: bold;
   font-family: 'Roboto', 'sans-serif';
 }
 
 .container-texto h2 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: var(--fonte-subtitulo-header);
   font-family: 'Roboto', 'sans-serif';
 }
 
 .container-texto h3 {
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: var(--fonte-texto-header);
   font-family: 'Roboto', 'sans-serif';
 }
 
@@ -92,16 +92,20 @@
 .container-imagem {
   display: flex;
   height: fit-content;
-  width: 50%;
+  width: 40%;
   justify-content: center;
+  align-items: flex-end;
   text-align: left;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
 }
 
 .container-imagem img {
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
-  position: bottom;
   object-fit: cover;
+  align-self: flex-end;
 }
 
 /* Consultas */
@@ -111,7 +115,6 @@
   margin: 20px auto;
   margin-bottom: 0;
   background: #ffffff;
-  border-radius: 15px;
   overflow: hidden;
   padding: 20px;
   background-image: url('/elementos-fundo.png');
@@ -126,27 +129,25 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: fit-content;
-  height: 11rem;
   max-width: 100%;
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
   text-align: center;
-  border-radius: 10rem;
 }
 
-.consultas-titulo img {
-  max-width: 100%;
+.consultas-titulo h1 {
+  font-size: var(--fonte-pequena);
+  font-family: 'Roboto', 'sans-serif';
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+  border-radius: 2rem;
 }
 
 .consultas-grid {
   margin: auto;
-  max-width: 80rem;
+  max-width: 85%;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 15px;
-  padding: 15px;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .consultas-imagem {
@@ -185,13 +186,14 @@
 
 .consultas-item .item-titulo {
   font-family: 'Roboto', 'sans-serif';
+  font-size: var(--fonte-pequena);
 }
 
 .item-titulo i {
   margin-right: 10px;
   margin-left: 5px;
   color: black;
-  font-size: 2rem;
+  font-size: var(--fonte-pequena);
   flex-shrink: 0;
 }
 
@@ -224,14 +226,17 @@
 }
 
 .item-titulo {
-  font-size: 1.4rem;
   color: black;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
+.item-titulo i {
+  font-size: var(--fonte-pequena);
+}
+
 .item-descricao {
-  font-size: 1.2rem;
+  font-size: var(--fonte-pequena);
   color: black;
   margin: 0;
   line-height: 1.5;
@@ -253,11 +258,11 @@
 .sobre-mim-imagem {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   align-items: flex-end;
   padding-right: 7rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .sobre-mim-imagem img {
@@ -281,29 +286,78 @@
   overflow: hidden;
 }
 
-.sobre-mim-texto img {
-  display: flex;
-  padding-left: 20%;
-  align-items: center;
-  justify-content: center;
-  height: 7rem;
-  width: 80%;
-  margin-bottom: 1rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
+.sobre-mim-texto h3 {
+  width: fit-content;
+  text-align: justify;
+  font-size: var(--fonte-pequena);
+  font-family: 'Roboto', 'sans-serif';
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+  border-radius: 2rem;
 }
 
 .sobre-mim-texto h1 {
   text-align: justify;
-  font-size: clamp(1.6rem, 2vw, 3.5rem);
-  font-weight: bold;
+  font-size: var(--fonte-grande);
+  font-weight: 600;
   font-family: 'Roboto', 'sans-serif';
 }
 
 .sobre-mim-texto p {
   text-align: justify;
-  font-size: clamp(1.4rem, 1.5vw, 2.5rem);
+  font-size: var(--fonte-pequena);
   font-family: 'Lora', 'sans-serif';
+}
+
+.sobre-mim-texto p strong {
+  text-align: justify;
+  font-size: var(--fonte-pequena);
+  font-family: 'Lora', 'sans-serif';
+}
+
+.sobre-mim-texto a {
+  text-align: justify;
+  font-size: var(--fonte-pequena);
+  font-family: 'Lora', 'sans-serif';
+  text-decoration: none;
+  color: inherit;
+}
+
+#agendar-consulta {
+  display: flex;
+  text-decoration: none !important;
+}
+
+.btn-consulta {
+  text-decoration: none !important;
+  position: right;
+  font-weight: 700;
+  font-size: var(--fonte-menor);
+  background: var(--cor-rosa);
+  color: white;
+  cursor: pointer;
+  transition-duration: 1s;
+  transition-property: border-top, border-left, border-bottom, border-right,
+    box-shadow;
+  width: fit-content;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  padding: 10px;
+}
+
+.btn-consulta:hover {
+  scale: 1.02;
+}
+
+#agendar-consulta .btn-consulta a {
+  display: block;
+  color: var(--cor-azul);
+  font-size: var(--fonte-menor);
+  text-decoration: none !important;
+}
+
+#agendar-consulta a {
+  text-decoration: none;
 }
 
 /* Botão atendimento */
@@ -339,7 +393,7 @@
 }
 
 .button-icon {
-  scale: 1.5;
+  scale: 1.3;
   display: flex;
   border: 3px #fff solid;
   width: fit-content;
@@ -424,14 +478,17 @@
   align-items: center;
   margin: auto;
   width: fit-content;
-  height: 10rem;
   max-width: 100%;
-  padding: 20px;
   margin-top: 2rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
   text-align: center;
-  border-radius: 10rem;
+}
+
+.consultorio-titulo h1 {
+  font-size: var(--fonte-pequena);
+  font-family: 'Roboto', 'sans-serif';
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+  border-radius: 2rem;
 }
 
 .img-localizacao {
@@ -440,19 +497,21 @@
   align-items: center;
   margin: auto;
   width: fit-content;
-  height: 9rem;
   max-width: 100%;
-  padding: 15px;
   margin-top: 2rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
   text-align: center;
-  border-radius: 10rem;
+}
+
+.img-localizacao h1 {
+  font-size: var(--fonte-pequena);
+  font-family: 'Roboto', 'sans-serif';
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+  border-radius: 2rem;
 }
 
 .consultorio iframe {
   width: 100%;
-  padding-bottom: 2rem;
 }
 
 .consultorio p {
@@ -490,7 +549,6 @@
 .descricao-consultorio {
   flex: 1;
   width: 70%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -502,7 +560,7 @@
 
 .descricao-consultorio h4 {
   text-align: justify;
-  font-size: clamp(1.4rem, 1.8vw, 3.2rem);
+  font-size: var(--fonte-pequena);
   font-weight: bold;
   height: fit-content;
   padding-bottom: 1rem;
@@ -518,12 +576,50 @@
   overflow: hidden;
   flex-grow: 1;
   text-align: justify;
-  font-size: clamp(1.2rem, 1.4vw, 2.2rem);
+  font-size: var(--fonte-pequena);
   font-family: 'Lora', 'sans-serif';
 }
 
 .descricao-consultorio p:last-child {
   padding-bottom: 0;
+}
+
+#agendar-consulta2 {
+  display: flex;
+  text-decoration: none !important;
+  justify-content: center !important;
+}
+
+.btn-consulta2 {
+  text-decoration: none !important;
+  position: right;
+  font-weight: 700;
+  font-size: var(--fonte-menor);
+  background: var(--cor-rosa);
+  color: white;
+  cursor: pointer;
+  transition-duration: 1s;
+  transition-property: border-top, border-left, border-bottom, border-right,
+    box-shadow;
+  width: fit-content;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  padding: 10px;
+}
+
+.btn-consulta2:hover {
+  scale: 1.02;
+}
+
+#agendar-consulta2 .btn-consulta2 a {
+  display: block;
+  color: var(--cor-azul);
+  font-size: var(--fonte-menor);
+  text-decoration: none !important;
+}
+
+#agendar-consulta2 a {
+  text-decoration: none;
 }
 
 /* Atendimentos */
@@ -532,17 +628,20 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 12rem;
-  width: 100%;
-  margin-top: 3rem;
+  height: fit-content;
   margin-bottom: 0;
   text-align: center;
-  border-radius: 15px 15px 0 0;
   padding-bottom: 5px;
   padding-top: 0;
-  padding-bottom: 1rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
+  padding-bottom: 0;
+}
+
+.titulo-atendimentos h1 {
+  font-size: var(--fonte-pequena);
+  font-family: 'Roboto', 'sans-serif';
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+  border-radius: 2rem;
 }
 
 
@@ -555,7 +654,8 @@
   max-width: 60%;
   margin: auto;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
+  padding-bottom: 3rem;
 }
 
 .card {
@@ -563,7 +663,7 @@
   position: relative;
   width: 100%;
   max-width: 300px;
-  height: 25rem;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -612,15 +712,15 @@
 }
 
 .heading {
-  font-size: 1.55rem;
+  font-size: var(--fonte-pequena);
   font-weight: bold;
   font-family: 'Roboto', 'sans-serif';
 }
 
 .card p:not(.heading) {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: var(--fonte-menor);
   text-align: justify center;
+  font-family: 'Lora', 'sans-serif';
 }
 
 .card p:last-child {
@@ -630,6 +730,7 @@
   margin-bottom: 5rem;
   padding-bottom: 1rem;
   font-family: 'Lora', 'sans-serif';
+  font-size: var(--fonte-menor);
 }
 
 .card:hover::after {
@@ -639,97 +740,6 @@
 
 .card:hover::before {
   transform: scale(1.05);
-}
-
-/* FAQ */
-
-.faq {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(-135deg,
-    var(--cor-laranja) 0%,
-    var(--cor-laranja) 5%,
-    transparent 30%,
-    transparent 80%,
-    var(--cor-azul) 95%);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 2rem;
-}
-
-.duvidas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: fit-content;
-  height: 10rem;
-  max-width: 100%;
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
-  text-align: center;
-  border-radius: 10rem;
-}
-
-.faq p {
-  font-family: 'Roboto', 'sans-serif';
-}
-
-.faq li {
-  font-family: 'Lora', 'sans-serif';
-}
-
-#faq-section {
-  width: 50%
-}
-
-#faq-section details summary {
-  font-size: 1.2rem;
-  background: linear-gradient(-135deg,
-    var(--cor-rosa) 0%,
-    var(--cor-rosa) 5%,
-    transparent 20%,
-    transparent 80%,
-    transparent);
-  padding: 2%;
-  border-bottom: 2px solid var(--cor-rosa);
-  color: var(--cor-rosa);
-  font-weight: 600;
-}
-
-#faq-section details p {
-  font-size: 1.1rem;
-  background: linear-gradient(-135deg,
-    var(--cor-azul) 0%,
-    transparent 5%,
-    transparent 30%,
-    transparent 80%
-    var(--cor-azul) 90%,);
-  color: black;
-  padding: 2%;
-  text-align: justify;
-  font-weight: 600;
-}
-
-#faq-section details ul li {
-  font-size: 1.1rem;
-  background: linear-gradient(-135deg,
-    var(--cor-azul) 0%,
-    transparent 5%,
-    transparent 30%,
-    transparent 80%
-    var(--cor-azul) 90%,);
-  color: black;
-  padding: 2%;
-  text-align: justify;
-  font-weight: 600;
 }
 
 /* Responsividade */
@@ -758,12 +768,14 @@
     margin-bottom: 0;
   }
 
+  .container-imagem {
+    width: 60%;
+  }
+
   .container-imagem img {
     height: auto;
-    padding-left: 2rem;
-    max-width: 100%;
-    max-height: 50%;
     object-fit: cover;
+    align-self: flex-end;
   }
 
   .sobre-mim-container {
@@ -772,14 +784,14 @@
   }
 
   .sobre-mim-imagem {
-    width: 50%;
+    width: 60%;
     height: auto;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 
   .sobre-mim-imagem img {
-    width: 50%;
+    width: 60%;
     border-radius: 3rem;
     height: auto;
   }
@@ -804,21 +816,6 @@
   }
 }
 
-@media (max-width: 760px) {
-
-  .sobre-mim-texto {
-    padding-bottom: 1rem;
-  }
-
-  .sobre-mim-imagem {
-    width: 70%;
-  }
-
-  .sobre-mim-imagem img {
-    width: 70%;
-  }
-}
-
 @media (min-width: 992px) {
   .parallax {
     background-size: cover;
@@ -829,6 +826,10 @@
   }
   .sobre-mim-texto {
     padding-right: 8rem;
+  }
+
+  .card {
+    height: 100%;
   }
 }
 
@@ -852,31 +853,15 @@
 
   .consultas-item p {
     font-size: 1rem;
-    padding-top: 1rem;
+    padding-top: 0.2rem;
+  }
+
+  .atendimentos {
+    max-width: 100%;
   }
 
   .card {
-    width: 600px;
-  }
-
-  #card1 p:last-child {
-    font-size: 1.2rem;
-  }
-
-  #card2 p:last-child {
-    font-size: 1.2rem;
-  }
-
-  #card3 p:last-child {
-    font-size: 1.2rem;
-  }
-
-  .heading {
-    font-size: 1.3rem;
-  }
-
-  .card p:not(.heading) {
-    font-size: 1rem;
+    width: 100%;
   }
 
   .container-imagem {
@@ -894,11 +879,9 @@
   .item-titulo i {
     font-size: 1.8rem;
   }
-}
 
-@media (max-width: 1200px) {
-  .card p:not(.heading) {
-    font-size: 1.1rem;
+  .sobre-mim-imagem {
+    width: 80%;
   }
 
   .sobre-mim-imagem img {
@@ -914,19 +897,19 @@
   #robbu-whatsapp-button {
     right: 5px !important;
   }
+
+  .button-icon {
+    scale: 1.05;
+  }
 }
 
-@media only screen and (min-width: 1427px) and (max-width: 1500px) {
-  #card1 p:last-child {
-    font-size: 1.3rem;
+@media only screen and (min-width: 992px) and (max-width: 1700px) {
+  .consultas-imagem {
+    height: 100%;
   }
 
-  #card2 p:last-child {
-    font-size: 1.3rem;
-  }
-
-  #card3 p:last-child {
-    font-size: 1.3rem;
+  .consultas-item {
+    width: 100%;
   }
 }
 
@@ -959,13 +942,25 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 991px) {
   .home-container {
     display: flex;
+    padding-right: 10%;
     flex-direction: column;
   }
 
   .container-texto {
     padding-right: 5rem;
+  }
+
+  #agendar-consulta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1500px) {
+  .sobre-mim-imagem img {
+    height: 100%;
+    width: 80%;
   }
 }

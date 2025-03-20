@@ -13,4 +13,11 @@ body {
   --cor-amarelo: #ffd571;
   --cor-laranja: #fe966f;
   --cor-verde: #e8ff70;
+  --fonte-titulo-header: clamp(1.5rem, 5vw, 3.5rem);
+  --fonte-subtitulo-header: clamp(1.3rem, 4vw, 2.5rem);
+  --fonte-texto-header: clamp(1rem, 3vw, 2rem);
+  --fonte-grande: clamp(1.3rem, 3.2vw, 2.2rem);
+  --fonte-media: clamp(1.15rem, 3vw, 2rem);
+  --fonte-pequena: clamp(1.1rem, 2vw, 1.3rem);
+  --fonte-menor: clamp(1rem, 1.8vw, 1.3rem);
 }

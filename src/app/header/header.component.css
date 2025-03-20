@@ -19,6 +19,11 @@
   justify-content: center !important;
 }
 
+.navbar-nav ul {
+  font-size: var(--fonte-menor) !important;
+  font-family: 'Roboto', 'sans-serif' !important;
+}
+
 .nav-item {
   justify-content: center !important;
   align-items: center !important;
@@ -30,6 +35,7 @@
 .nav-item a {
   border-bottom: 0.5px solid transparent;
   font-family: 'Roboto', 'sans-serif' !important;
+  font-size: var(--fonte-menor) !important;
 }
 
 .nav-item a:hover {
